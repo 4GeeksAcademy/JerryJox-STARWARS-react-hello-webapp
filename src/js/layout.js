@@ -9,7 +9,7 @@ import injectContext from "./store/appContext";
 
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
-import { Characters } from "./component/charaters";
+import { CharactersCard } from "./component/charactersCard";
 
 //create your first component
 const Layout = () => {
@@ -22,7 +22,8 @@ const Layout = () => {
 			<BrowserRouter basename={basename}>
 				<ScrollToTop>
 					<Navbar />
-					<Charaters />
+					<CharactersCard />
+					{/* <CharactersCarousel/> */}
 					<Routes>
 						<Route path="/" element={<Home />} />
 						<Route path="/demo" element={<Demo />} />
