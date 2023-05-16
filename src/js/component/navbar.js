@@ -7,9 +7,9 @@ export const Navbar = () => {
 
 {/* - 	IMAGEN CAÍDA */}
 
-			<img src="../img/LOGO STAR WARS.png" width="30" height="30" class="d-inline-block align-top" alt=""></img>
-			<div class="dropdown">
-				<button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+			<img src="https://cdn.worldvectorlogo.com/logos/star-wars-2.svg" width="auto" height="60px" className="d-inline-block align-top" alt=""></img>
+			<div className="dropdown">
+				<button className="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
 					Favorites
 				</button>
 
@@ -17,10 +17,10 @@ export const Navbar = () => {
 	-	CAMBIAR ICONO PAPELERA
 	-	MODIFICAR ESTADO ASOCIADO AL BOTÓN FAVORITO DE LAS CARD */}
 	
-				<ul class="dropdown-menu">
-					<li><a class="dropdown-item" href="#">Action</a></li>
-					<li><a class="dropdown-item" href="#">Another action</a></li>
-					<li><a class="dropdown-item" href="#">Something else here</a></li>
+				<ul className="dropdown-menu">
+					<li><a className="dropdown-item" href="#">Action</a></li>
+					<li><a className="dropdown-item" href="#">Another action</a></li>
+					<li><a className="dropdown-item" href="#">Something else here</a></li>
 				</ul>
 			</div>
 		</nav>
