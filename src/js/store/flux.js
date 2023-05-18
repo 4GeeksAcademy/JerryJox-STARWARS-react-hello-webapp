@@ -1,26 +1,33 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
-			characters: [],
-			planets: []
+
+			characters: [{}]
+			// ,
+			// planets: []
+			
 		},
 		actions: {
 
 			fetchCharacters: () =>{ 
+				fetch("https://www.swapi.tech/api/people/")
+				.then(res => res.json())
+				.then(data => setStore({characters: data.results }))
+				.then(error => console.log(error));
 
-			fetch("https://www.swapi.tech/api/people/")
-            .then(res => res.json())
-            .then(data => setStore({characters: data.results }))
-            .then(error => console.log(error));},
+		},
 
-			fetchPlanets: () => {
+// PARA DESCOMENTAR -- TB LLAVE AL FINAL DEL ARCHIVO
 
-				fetch("https://www.swapi.tech/api/planets/")
-					.then(response => response.json()) // te trae una respuestas y la convierte en json
-								 //setStore({propiedadDeStore:valor})
-					.then(data => setStore({planets: data.results })) // esa respuesta la voy a guardar en un espacio de memoria que se llame "data" que a su vez se convertira en un objeto.
-					.catch(err => console.log("request failed", err)); // si sale algo mal en alguno de los dos primeros paso
-			
+			// fetchPlanets: () => {
+
+			// 	fetch("https://www.swapi.tech/api/planets/")
+			// 		.then(response => response.json()) // te trae una respuestas y la convierte en json
+			// 					 //setStore({propiedadDeStore:valor})
+			// 		.then(data => setStore({planets: data.results })) // esa respuesta la voy a guardar en un espacio de memoria que se llame "data" que a su vez se convertira en un objeto.
+			// 		.catch(err => console.log("request failed", err)); // si sale algo mal en alguno de los dos primeros paso
+	
+//	PARA DESCOMENTAR -- TB LLAVE AL FINAL DEL ARCHIVO
 					
 				// fetch("https://www.swapi.tech/api/planets")
 				// 	.then(response => response.json()) // te trae una respuestas y la convierte en json
@@ -58,6 +65,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 			}
 		}
 	};
-};
+// };
 
 export default getState;
